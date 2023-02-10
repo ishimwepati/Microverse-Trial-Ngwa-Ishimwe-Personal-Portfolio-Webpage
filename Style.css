@@ -1,1 +1,100 @@
-
+*{
+    margin: 0;
+    padding: 0;
+  }
+  :root{
+    --white: #f0f0f0;
+    --red: #bf3245;
+    --blue: #46577e;
+    --gray: #313942;
+  }
+  li{
+    list-style-type: none;
+  }
+  a{
+    text-decoration: none;
+    color: var(--whaite);
+  }
+  header{
+  background-color: var(--red);
+  display:flex;
+  justify-content: flex-end;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  }
+  @media (max-width: 700px){
+    #navbar ul{
+      justify-content: column;
+    }
+  }
+  #navbar ul{
+    display: flex;
+    margin: 0 1rem;
+  }#navbar ul li a{
+    font-size: 2rem;
+    display: block;
+    padding: 2rem;
+  }
+  #navbar ul li:hover{
+    background-color: var(--blue);
+  }
+  #welcome-section{
+  background-color: var(--gray);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #welcome-section h1{
+    color: var(--white);
+    font-weight: 800px;
+    font-size: 3rem;
+  }#projects{
+    background-color: var(--blue);
+    text-align: center;
+    padding: 10rem 5rem;
+  }#projects h2{
+    font-size: 4rem;
+    font-style: underline; 
+    border-bottom: 1px solid var(--white);
+    color: var(--white);
+    font-weight: 700px;
+    margin: 0 auto 50px auto;
+    max-width: 400px;
+  }
+  .projects-grid{
+      display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    margin: 5rem; 
+  }
+  .project-image{
+    height: calc(100% - 6.5em);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+  }
+  .project-tile{
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow:  10px 10px 10px  black
+  }
+  .project-title{
+    background-color: var(--gray);
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    color: var(--white);
+  }
+  .code{
+    color: var(--gray);
+    transition: color 0.5s ease-out;
+  }
+  .project-tile:hover .code{
+    color: orange;
+  }
